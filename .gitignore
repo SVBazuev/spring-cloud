@@ -1,0 +1,10 @@
+.github/
+.idea/
+.vscode/
+target/
+canonical/
+logs/
+*.log
+*.py
+[_]*.md
+*.sql
