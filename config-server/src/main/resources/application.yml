@@ -2,17 +2,8 @@ server:
   port: 8888
 
 spring:
-  application:
-    name: config-server
   cloud:
     config:
       server:
-        git:
-          uri: file:///config-repo
-          default-label: main
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+        native:
+          search-locations: file:///config-repo
