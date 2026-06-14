@@ -19,11 +19,11 @@ services:
     container_name: config-server
     ports:
       - "8888:8888"
-    depends_on:
-      discovery-service:
-        condition: service_healthy
+    # depends_on:
+    #   discovery-service:
+    #     condition: service_healthy
     environment:
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka
+      # EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka
       SPRING_PROFILES_ACTIVE: native
       SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS: file:///config-repo
     volumes:
